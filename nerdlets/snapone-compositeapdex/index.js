@@ -5,11 +5,11 @@ import {CalculateCompositeApdex, CalculateCompositeApdexTimeseries, CombineQuery
 
 // https://docs.newrelic.com/docs/new-relic-programmable-platform-introduction
 
-export default class SnapOneCompositeApdex extends React.Component {
+export default class CompositeApdex extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            queryAccountIds: [2767526, 1480717, 1300394],
+            queryAccountIds: [/*add in account ids in a comma separated list*/ ],
         }
     }
 
@@ -103,12 +103,12 @@ export default class SnapOneCompositeApdex extends React.Component {
           }
           `;
 
-          // Variables for the Nerdgraph queries
+          // Variables for the Nerdgraph queries, Add in the the required account ids
 
           const variables = {
-            webSvcActId: 1480717,
-            masterActId: 1300394,
-            ovrcActId: 2767526
+            webSvcActId: 0,
+            masterActId: 0,
+            ovrcActId: 0
           };
 
         return (
